@@ -7,6 +7,159 @@ https://blog.csdn.net/IS_huang/article/details/111632910
 https://blog.csdn.net/fwdwqdwq/article/details/123421632
 dataset
 
-是 否 等待
 
 Vue.components('permission-self', ttpVueLoader(`${location.protocol}//${location.host}${ipConfig}/node_modules/httpVueLoader/permission.vue`))
+主页 to: /collect ---from: /
+成功 失败 等待 失效 自定义
+sessionStorage 一次会话，浏览器标签页，标签页之间数据不共享
+
+
+ let _jiraNumbers_ = sessionStorage.getItem('clickJiraNumbers') ? JSON.parse(sessionStorage.getItem('clickJiraNumbers')) : []
+              let firstClass = 'first-column'
+              if (_jiraNumbers_.some(item => item === cellValue)) firstClass = 'first-column-isclicked';
+              if(typeof cellValue === 'string')  return (<div>{cellValue}</div>);
+              const resLi = (li) => {
+                return (<li>{li.fileName}</li>)
+              }
+              return (<ul
+               class={firstClass}
+
+
+                onClick={() => {
+                    let _jiraNumbers_ = sessionStorage.getItem('clickJiraNumbers') ? JSON.parse(sessionStorage.getItem('clickJiraNumbers')) : []
+                    _jiraNumbers_.push(cellValue)
+                    let newJiraNumbers = [...new Set(_jiraNumbers_)]
+                    sessionStorage.setItem('clickJiraNumbers', JSON.stringify(newJiraNumbers))
+                  }}
+              >
+              {
+                cellValue.map(item => {
+                  return resLi(item)
+                })
+              }
+              </ul>)
+return (<div style={!cellValue ? 'min-height:55px' : ''} 
+                onContextmenu={event => {
+                }}
+                onClick={() => {
+                  if (!that.canVisitDetail && that.currUserData.dbId == row.id) return
+                  that.canVisitDetail = false
+                  let _jiraNumbers_ = sessionStorage.getItem('clickJiraNumbers') ? JSON.parse(sessionStorage.getItem('clickJiraNumbers')) : []
+                  _jiraNumbers_.push(cellValue)
+`${(tableWidth - 50) / that.columSum}`
+<div>
+                  {
+                    (that.currUserData.groupName == 'stserverOnlineService') ? (<a
+                      class={firstClass} name="href-visit"
+                      title={cellValue}
+                      style={!that.canVisitDetail && that.currUserData.dbId == row.id ? 'cursor: not-allowed' : ''}
+                      href={process.env.VUE_APP_BASE_URL + '/index/#' + that.$route.path + `?groupName=${that.currUserData.groupName}&processDefId=${that.currUserData.processDefId}&processId=${that.currUserData.processId}&currentUser=${that.currUserData.currentUser}&dbId=${row.id}` + '&showDetail=true'}
+                    >{cellValue}</a>) : (<div class={firstClass}
+                      title={cellValue}
+                      style={!that.canVisitDetail && that.currUserData.dbId == row.id ? 'cursor: not-allowed' : ''}>{cellValue}</div>
+                    )
+                  }
+let blob = new Blob([res.data])
+            let url = window.URL.createObjectURL(blob) // 创建下载链接
+            let link = document.createElement('a') // 转换完成，创建一个a标签用于下载
+            link.href = url
+            link.setAttribute('download', decodeURIComponent(filename)) // 解码，这里也可以自定义下载的文件名字，如link.setAttribute('download', 'xxxxxdownload.xls')
+            document.body.appendChild(link)
+            link.click() //用新窗口打开window.open(link.click())，但是下载完成后不会先get请求那样自动关闭窗口
+            document.body.removeChild(link) // 下载完成移除元素
+            window.URL.revokeObjectURL(url) // 释放掉blob对象
+formData.append('strParam', JSON.stringify(obj));
+formData.set("filePath", file.url)
+.active::after {
+                    content: '';
+                    width: 80%; // active的80%
+                    
+// 要转义
+
+
+
+
+$(this).attr("data-type");
+
+
+titleDo(noticeType) {
+      console.log(noticeType,3333)
+      const search = { ...noticeType }
+      const repOffice_KlTable = this.$refs.repOffice_KlTable
+      Object.assign(repOffice_KlTable.search, search)
+      Object.assign(repOffice_KlTable._search, search)
+      repOffice_KlTable.page.current = 1
+      console.log()
+      repOffice_KlTable.initTableData()
+    }
+
+
+let _payload = JSON.stringify(payload)
+_payload = _payload.replace(/id/g, 'value')
+
+
+
+
+ // 数据格式化
+    optionFormat(list) {
+      list.forEach(item => {
+        item.value = item.id
+        item.label = item.text
+        if(item.children) this.optionFormat(item.children);
+      })
+      return list
+    }
+
+
+
+
+import {
+ Dropdown, DropdownMenu, DropdownItem
+} from 'element-ui'
+
+
+参数的先后顺序，前面参数修改要初始化后面参数
+// 设置ap请求参数apiParams(无法改变)
+apiParams: {
+            positionName: '',
+            positionType: '',
+            customerName: '',
+            start: 0,
+            length: 10,
+            'columns[4][data]': 'count',
+            'order[0][column]': 4,
+            'order[0][dir]': 'desc' // asc
+       }
+:label="item.label":value="item.value"
+
+
+
+data(){
+child: {
+}
+} 
+
+
+childClose ({type: 'oneSelf',data:{} = {}}) {
+      if(type === '') {
+      }
+      this.page.siteInventoryDetailShow = false
+    },
+
+
+httpVueLoader.js
+
+
+
+[^}]            除了“}”以外的任何字符
+
+[^}]*           0或多个非“}”的字符
+
+
+^[^}]*        从左向右匹配非“}”的多个字符
+
+^[^}]*\}      从左向右匹配第一个包含“}”的字符串
+
+
+
+^[^】]*\】
